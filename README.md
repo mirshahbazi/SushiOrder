@@ -2,7 +2,12 @@
 
  > MVC asp.NET app to order your favorite sushi !
 
-[DEV WebSite](https://www.chiarani.it "Fabio Chiarani")
+```html
+   // code for coloring
+   <span style="color: green"> [DEV WebSite](https://www.chiarani.it "Fabio Chiarani") </span>
+```
+
+
 
 [REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
@@ -34,7 +39,7 @@
 | surname | varchar(x)      |     |
 | cell | varchar(x)      |     |
 | mail | varchar(x)      |     |
-| 'PRIMARY KEY  (idcustomer)'           |
+| `PRIMARY KEY`  (idcustomer)           |
 
 <br />
 ###### PRODUCTS TABLE
@@ -47,7 +52,7 @@
 | price | double     |     |
 | notes | varchar(x)      |   X  |
 | isfrozen | bool      |     |
-| 'PRIMARY KEY  (idproduct)'           |
+| `PRIMARY KEY`  (idproduct)           |
 
 <br />
 ###### PRODUCTS TABLE
@@ -60,9 +65,9 @@
 | total | double     |     |
 | paymentmethod | varchar(x)      |   x  |
 | notes | bool      |    x |
-| 'PRIMARY KEY'  (idproduct)      |     |
-| 'FOREIGN KEY(idcustomer)' 'REFERENCES' customers(idcustomer)||
-|'FOREIGN KEY'(idproduct) 'REFERENCES' products(idproduct)||
+| `PRIMARY KEY`  (idproduct)      |     |
+| `FOREIGN KEY`(idcustomer) `REFERENCES` customers(idcustomer)||
+|`FOREIGN KEY`(idproduct) `REFERENCES` products(idproduct)||
 
 <br />
 <br />
