@@ -1,6 +1,8 @@
 # SushiOrder
  > MVC asp.NET app to order your favorite sushi !
+ --------
  > [DEV WebSite](https://www.chiarani.it "Fabio Chiarani")
+ --------
  > [REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
 --------
@@ -12,11 +14,15 @@
 - References
 - COPY / LICENSE
 
+--------
+
 ##### *MVC Scheme*
 Not code first..
 
+--------
+
 ##### *Database Scheme*
-######### CUSTOMERS
+###### CUSTOMERS
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
 | idcustomer      | int |  |
@@ -27,7 +33,7 @@ Not code first..
 | 'PRIMARY KEY  (idcustomer)'           |
 
 
-######### PRODUCTS
+###### PRODUCTS
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
 | idproduct      | int |  |
@@ -39,6 +45,7 @@ Not code first..
 | isfrozen | bool      |     |
 | 'PRIMARY KEY  (idproduct)'           |
 
+--------
 
 ##### *Technologies*
 - MVC4 asp.NET (.NET Framework 4.5)
@@ -47,11 +54,13 @@ Not code first..
 - VisualStudio for developing
 - Aruba for final hosting
 
+--------
 
 ##### *COPYRIGHT*
 SushiOrder di Fabio Chiarani è distribuito con Licenza Creative Commons Attribuzione - Non commerciale - Non opere derivate 4.0 Internazionale.
  > [SEE MORE CC](http://creativecommons.org/licenses/by-nc-nd/4.0/ "CopyRight") 
 
+--------
 
 ##### *LICENSE*
 You can review the code, or make copies of it, but you can't use it or change it in any way. Allows a window (no pun intended) on formerly completely proprietary, secret code.
