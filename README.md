@@ -2,7 +2,8 @@
 ```
    MVC asp.NET app to order your favorite sushi ! 
 ```
-[DEV WebSite](http://www.chiarani.it "Fabio Chiarani") ![logos](https://github.com/Xiryl/SushiOrder/blob/master/DH.png =100x50)
+![logos](https://github.com/Xiryl/SushiOrder/blob/master/DH.png)
+[DEV WebSite](http://www.chiarani.it "Fabio Chiarani")
 <br /> 
 [REF WebSite](http://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
