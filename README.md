@@ -8,8 +8,7 @@
 
 <br />
 <br />
-###### *contents*
--
+## *contents*
 
 - Technologies
 - MVC Scheme
@@ -19,14 +18,13 @@
 
 <br />
 <br />
-##### *MVC Scheme*
--
+## *MVC Scheme*
+
 Not code first..
 
 <br />
 <br />
-##### *Database Scheme*
-======
+## *Database Scheme*
 <br />
 ###### CUSTOMERS TABLE
 | NAME        | TYPE           | NULL  |
@@ -38,7 +36,7 @@ Not code first..
 | mail | varchar(x)      |     |
 | 'PRIMARY KEY  (idcustomer)'           |
 
-
+<br />
 ###### PRODUCTS TABLE
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
@@ -53,8 +51,7 @@ Not code first..
 
 <br />
 <br />
-##### *Technologies*
-======
+## *Technologies*
 - MVC4 asp.NET (.NET Framework 4.5)
 - MySql db
 - Azure for test hosting
@@ -63,13 +60,11 @@ Not code first..
  
 <br />
 <br />
-##### *COPYRIGHT*
-======
+## *COPYRIGHT*
 SushiOrder di Fabio Chiarani è distribuito con Licenza Creative Commons Attribuzione - Non commerciale - Non opere derivate 4.0 Internazionale.
  > [SEE MORE CC](http://creativecommons.org/licenses/by-nc-nd/4.0/ "CopyRight") 
 
 <br />
 <br />
-##### *LICENSE*
-======
+## *LICENSE*
 You can review the code, or make copies of it, but you can't use it or change it in any way. Allows a window (no pun intended) on formerly completely proprietary, secret code.
