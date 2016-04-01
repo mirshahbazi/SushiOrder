@@ -8,19 +8,19 @@
 
 <br />
 <br />
-## *contents*
+## *README CONTENTS*
 
 - Technologies
 - MVC Scheme
 - Database Scheme
 - References
-- COPY / LICENSE
+- Copy / License
 
 <br />
 <br />
 ## *MVC Scheme*
 
-Not code first..
+..todo..
 
 <br />
 <br />
@@ -48,6 +48,21 @@ Not code first..
 | notes | varchar(x)      |   X  |
 | isfrozen | bool      |     |
 | 'PRIMARY KEY  (idproduct)'           |
+
+<br />
+###### PRODUCTS TABLE
+| NAME        | TYPE           | NULL  |
+| ------------- |:-------------:| -----:|
+| idcustomer      | int |  |
+| idproduct      |int      |    |
+| orderdate | datetime      |     |
+| pickupdate | datetime      |     |
+| total | double     |     |
+| paymentmethod | varchar(x)      |   x  |
+| notes | bool      |    x |
+| 'PRIMARY KEY'  (idproduct)      |     |
+| 'FOREIGN KEY(idcustomer)' 'REFERENCES' customers(idcustomer)||
+|'FOREIGN KEY'(idproduct) 'REFERENCES' products(idproduct)||
 
 <br />
 <br />
