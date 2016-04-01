@@ -1,7 +1,5 @@
 # SushiOrder
 
-======
-
  > MVC asp.NET app to order your favorite sushi !
 
 *[DEV WebSite](https://www.chiarani.it "Fabio Chiarani")
