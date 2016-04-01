@@ -2,8 +2,8 @@
 ```
    MVC asp.NET app to order your favorite sushi !
 ```
-[DEV WebSite](https://www.chiarani.it "Fabio Chiarani")<br />
-[REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
+[DEV WebSite](http://www.chiarani.it "Fabio Chiarani")<br />
+[REF WebSite](http://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
 <br />
 <br />
