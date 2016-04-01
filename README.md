@@ -6,25 +6,28 @@
 
 [REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
---------
-
+<br />
+<br />
 ### *CONTENTS*
+--------
 - Technologies
 - MVC Scheme
 - Database Scheme
 - References
 - COPY / LICENSE
-
---------
-
+- 
+<br />
+<br />
 ##### *MVC Scheme*
+--------
 Not code first..
 
-
-======
-
+<br />
+<br />
 ##### *Database Scheme*
-###### CUSTOMERS
+======
+<br />
+###### CUSTOMERS TABLE
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
 | idcustomer      | int |  |
@@ -35,8 +38,7 @@ Not code first..
 | 'PRIMARY KEY  (idcustomer)'           |
 
 
-
-###### PRODUCTS
+###### PRODUCTS TABLE
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
 | idproduct      | int |  |
@@ -48,22 +50,25 @@ Not code first..
 | isfrozen | bool      |     |
 | 'PRIMARY KEY  (idproduct)'           |
 
-======
-
+<br />
+<br />
 ##### *Technologies*
+======
 - MVC4 asp.NET (.NET Framework 4.5)
 - MySql db
 - Azure for test hosting
 - VisualStudio for developing
 - Aruba for final hosting
-
-======
-
+ 
+<br />
+<br />
 ##### *COPYRIGHT*
+======
 SushiOrder di Fabio Chiarani è distribuito con Licenza Creative Commons Attribuzione - Non commerciale - Non opere derivate 4.0 Internazionale.
  > [SEE MORE CC](http://creativecommons.org/licenses/by-nc-nd/4.0/ "CopyRight") 
 
-======
-
+<br />
+<br />
 ##### *LICENSE*
+======
 You can review the code, or make copies of it, but you can't use it or change it in any way. Allows a window (no pun intended) on formerly completely proprietary, secret code.
