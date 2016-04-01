@@ -1,14 +1,8 @@
 # SushiOrder
-
- > MVC asp.NET app to order your favorite sushi !
-
 ```html
-   // code for coloring
-   <span style="color: green"> [DEV WebSite](https://www.chiarani.it "Fabio Chiarani") </span>
+   <p style='color:red'>MVC asp.NET app to order your favorite sushi !</p>
 ```
-
-
-
+[DEV WebSite](https://www.chiarani.it "Fabio Chiarani")
 [REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
 
 <br />
