@@ -49,7 +49,7 @@
 | `PRIMARY KEY`  (idproduct)           |
 
 <br />
-###### PRODUCTS TABLE
+###### SHOPPINGCART TABLE
 | NAME        | TYPE           | NULL  |
 | ------------- |:-------------:| -----:|
 | idcustomer      | int |  |
