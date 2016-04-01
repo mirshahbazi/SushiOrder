@@ -1,6 +1,6 @@
 # SushiOrder
-```html
-   <p style='color:red'>MVC asp.NET app to order your favorite sushi !</p>
+```
+   MVC asp.NET app to order your favorite sushi !
 ```
 [DEV WebSite](https://www.chiarani.it "Fabio Chiarani")
 [REF WebSite](https://www.ristorantefuhao.it "Ristorante Fu Hao") 
