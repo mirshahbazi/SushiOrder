@@ -73,6 +73,8 @@
 - Azure for test hosting
 - VisualStudio for developing
 - Aruba for final hosting
+- BootStrap
+- Razor
  
 <br />
 <br />
