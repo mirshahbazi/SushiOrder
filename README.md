@@ -1,6 +1,6 @@
 # SushiOrder
 ```
-   MVC asp.NET app to order your favorite sushi ! 
+   web app to order your favorite sushi ! 
 ```
 ![logos](https://github.com/Xiryl/SushiOrder/blob/master/DH.png)
 [DEV WebSite](http://www.chiarani.it "Fabio Chiarani")
@@ -12,14 +12,14 @@
 ## *README CONTENTS*
 
 - Technologies
-- MVC Scheme
+- Site Scheme
 - Database Scheme
 - References
 - Copy / License
 
 <br />
 <br />
-## *MVC Scheme*
+## *Site Scheme*
 
 ..todo..
 
@@ -68,7 +68,7 @@
 <br />
 <br />
 ## *Technologies*
-- MVC4 asp.NET (.NET Framework 4.5)
+- asp.NET (.NET Framework 4.5)
 - MySql db
 - Azure for test hosting
 - VisualStudio for developing
