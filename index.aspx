@@ -64,23 +64,22 @@
                     <br /><br />
                     <h4>Inizia Ora!</h4>
                     <br /><br />
-                    <a id="download-button" style="height:auto; padding:15px; background-color:#C5D336" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
+                    <a id="btn_pietanze" style="height:auto; padding:15px; background-color:#C5D336" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
                         <img src="img/sushi_transparent.png" style="width:48px" />
                         <p>PIETANZE</p>
                     </a>
-                    <a id="download-button1" style="height:auto; padding:15px; background-color:#A6CB45" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
+                    <a id="btn_carrello" style="height:auto; padding:15px; background-color:#A6CB45" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
                         <img src="img/cart.png" />
                         <p>CARRELLO</p>
                     </a>
-                    <a id="download-button11" style="height:auto;margin-top:20px; padding:15px; background-color:#4AB2D6" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5" onclick="btnfunc()">
+                    <a id="btn_bevande" style="height:auto;margin-top:20px; padding:15px; background-color:#4AB2D6" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5" onclick="btnfunc()">
                         <img src="img/drink.png" />
                         <p>BEVANDE</p>
                     </a>
-                    <a id="download-button111" style="height:auto;margin-top:20px; padding:15px; background-color:#71B238" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
+                    <a id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#71B238" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
                         <img src="img/user.png" />
                         <p>ORDINE</p>
                     </a>
-
                 </div>
 
             </div>
