@@ -15,13 +15,25 @@
     </script>
 
     <script>
-        $(document).ready(function () {
-            // Handler for .ready() called.
-            $('html, body').animate({
-                scrollTop: $('#cont').offset().top
-            }, 'slow');
-        });
+        //$(document).ready(function () {
+        //    // Handler for .ready() called.
+        //    $('html, body').animate({
+        //        scrollTop: $('#cont').offset().top
+        //    }, 'slow');
+        //});
 </script>
+
+    <style>
+        #frase {
+                display: none;
+            }
+        @media (min-width: 992px) {
+            #frase {
+                display: inline;
+            }
+        }
+    </style>
+
 
 </head>
 <body>
@@ -48,9 +60,9 @@
 
 
             <div class="row" style="background-color:#343434">
-                <br><br>
+                <br />
                 <h4 class="header center orange-text text-lighten-2" style="margin-top:0px">Sushi Order</h4>
-                <div class="row center">
+                <div class="row center" id="frase">
                     <p class="header col s12 light" style="color:white;margin-top:0px">L'App per prenotare il tuo sushi preferito!</p>
                 </div>
             </div>
@@ -73,11 +85,11 @@
                         <img src="img/cart.png" />
                         <p>CARRELLO</p>
                     </a>
-                    <a id="btn_bevande" style="height:auto;margin-top:59px; padding:15px; background-color:#FF7300" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5">
+                    <a id="btn_bevande" style="height:auto;margin-top:20px; padding:15px; background-color:#FF7300" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5">
                         <img src="img/drink.png" />
                         <p>DRINK</p>
                     </a>
-                    <a id="btn_ordine" style="height:auto;margin-top:59px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
+                    <a id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
                         <img src="img/user.png" />
                         <p>IL TUO ORDINE</p>
                     </a>
@@ -93,34 +105,21 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+                    <p class="grey-text text-lighten-4">Description.</p>
 
 
                 </div>
                 <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
+                    <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
+                        <li><a class="white-text" href="#!">Link1</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright" style="background-color:#1d1d1d">
             <div class="container">
-                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                Powered By <a class="brown-text text-lighten-3" href="http://materializecss.com"> FC</a>
             </div>
         </div>
     </footer>
