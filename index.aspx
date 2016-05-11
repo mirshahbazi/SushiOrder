@@ -11,20 +11,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="js/jquery-2.2.3.min.js">
+    </script>
 
     <script>
-        function btnfunc() {
-            document.getElementById("here").scrollIntoView();
-        }
-        
-    </script>
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            $('html, body').animate({
+                scrollTop: $('#cont').offset().top
+            }, 'slow');
+        });
+</script>
 
 </head>
 <body>
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
-                <img src="img/logo_big.png" style="height:63px" />
+                <img src="img/logo_big.png" style="height:55px" />
             </a>
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="#">How To</a></li>
@@ -43,25 +47,22 @@
 
 
 
-        <div class="section">
             <div class="row" style="background-color:#343434">
                 <br><br>
-                <h1 class="header center orange-text text-lighten-2">Sushi Order</h1>
+                <h4 class="header center orange-text text-lighten-2" style="margin-top:0px">Sushi Order</h4>
                 <div class="row center">
-                    <h5 class="header col s12 light" style="color:white">L'App per prenotare il tuo sushi preferito!</h5>
+                    <p class="header col s12 light" style="color:white;margin-top:0px">L'App per prenotare il tuo sushi preferito!</p>
                 </div>
             </div>
-        </div>
 
 
 
-    <div class="container">
+    <div class="container" id="cont">
         <div class="section">
 
             <div class="row">
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <br /><br />
                     <h4>Crea il tuo Menù</h4>
                     <br /><br />
                     <a href="food.aspx" id="btn_pietanze" style="height:auto; padding:15px; background-color:#FF2000" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
@@ -78,7 +79,7 @@
                     </a>
                     <a id="btn_ordine" style="height:auto;margin-top:59px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
                         <img src="img/user.png" />
-                        <p>VEDI IL TUO ORDINE</p>
+                        <p>IL TUO ORDINE</p>
                     </a>
                 </div>
             </div>
@@ -88,7 +89,7 @@
 
 
 
-    <footer class="page-footer teal">
+    <footer class="page-footer" style="background-color:#2F2F2F">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -117,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright" style="background-color:#1d1d1d">
             <div class="container">
                 Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
             </div>
