@@ -46,7 +46,7 @@
         <div class="section">
             <div class="row" style="background-color:#343434">
                 <br><br>
-                <h1 class="header center orange-text text-lighten-2">Suhi Order</h1>
+                <h1 class="header center orange-text text-lighten-2">Sushi Order</h1>
                 <div class="row center">
                     <h5 class="header col s12 light" style="color:white">L'App per prenotare il tuo sushi preferito!</h5>
                 </div>
