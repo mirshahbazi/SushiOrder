@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,26 +62,25 @@
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <br /><br />
-                    <h4>Inizia Ora!</h4>
+                    <h4>Crea il tuo Menù</h4>
                     <br /><br />
-                    <a id="btn_pietanze" style="height:auto; padding:15px; background-color:#C5D336" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
+                    <a href="food.aspx" id="btn_pietanze" style="height:auto; padding:15px; background-color:#FF2000" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
                         <img src="img/sushi_transparent.png" style="width:48px" />
-                        <p>PIETANZE</p>
+                        <p>MENU'</p>
                     </a>
-                    <a id="btn_carrello" style="height:auto; padding:15px; background-color:#A6CB45" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
+                    <a id="btn_carrello" style="height:auto; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
                         <img src="img/cart.png" />
                         <p>CARRELLO</p>
                     </a>
-                    <a id="btn_bevande" style="height:auto;margin-top:20px; padding:15px; background-color:#4AB2D6" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5" onclick="btnfunc()">
+                    <a id="btn_bevande" style="height:auto;margin-top:59px; padding:15px; background-color:#FF7300" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5">
                         <img src="img/drink.png" />
-                        <p>BEVANDE</p>
+                        <p>DRINK</p>
                     </a>
-                    <a id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#71B238" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
+                    <a id="btn_ordine" style="height:auto;margin-top:59px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
                         <img src="img/user.png" />
-                        <p>ORDINE</p>
+                        <p>VEDI IL TUO ORDINE</p>
                     </a>
                 </div>
-
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
