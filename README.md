@@ -2,7 +2,7 @@
 ```
    web app to order your favorite sushi ! 
 ```
-![logos](https://github.com/Xiryl/SushiOrder/img/logo_big.png)
+![logos](https://github.com/Xiryl/SuhiOrder/blob/master/img/logo_big.png)
 [DEV WebSite](http://www.chiarani.it "Fabio Chiarani")
 <br /> 
 [REF WebSite](http://www.ristorantefuhao.it "Ristorante Fu Hao") 
