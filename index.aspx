@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
+  <title>SUSHIORDER</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,14 +27,38 @@
         #frase {
                 display: none;
             }
+
         @media (min-width: 992px) {
             #frase {
                 display: inline;
             }
+                    #app_title{
+            font-size:19px;
         }
+        }
+
+         .navbar-fixed-bottom {
+            background-color: #bbbbbb;
+            color: #4A4A4A;
+            text-align: center;
+        }
+		
+				html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 150px;
+}
+footer {
+    background: silver;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
     </style>
-
-
+   
 </head>
 <body>
     <nav class="white" role="navigation">
@@ -59,9 +83,9 @@
 
 
 
-            <div class="row" style="background-color:#343434">
+            <div class="row" style="background-color:#343434;margin-bottom:2px">
                 <br />
-                <h4 class="header center orange-text text-lighten-2" style="margin-top:0px">Sushi Order</h4>
+                <h4 id="app_title" class="header center orange-text text-lighten-2" style="margin-top:0px">Sushi Order</h4>
                 <div class="row center" id="frase">
                     <p class="header col s12 light" style="color:white;margin-top:0px">L'App per prenotare il tuo sushi preferito!</p>
                 </div>
@@ -70,12 +94,11 @@
 
 
     <div class="container" id="cont">
-        <div class="section">
+        <div class="section" style="padding-top:0px">
 
             <div class="row">
                 <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>Crea il tuo Menù</h4>
+
                     <br /><br />
                     <a href="food.aspx" id="btn_pietanze" style="height:auto; padding:15px; background-color:#FF2000" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
                         <img src="img/sushi_transparent.png" style="width:48px" />
@@ -95,14 +118,14 @@
                     </a>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br />
         </div>
     </div>
 
 
-
-    <footer class="page-footer" style="background-color:#2F2F2F">
-        <div class="container">
+    
+    <footer style="background-color: #2F2F2F; text-align: center;">
+              <div class="container">
             <div class="row">
                 <div class="col l6 s12">
                     <p class="grey-text text-lighten-4">Description.</p>
@@ -117,12 +140,12 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright" style="background-color:#1d1d1d">
-            <div class="container">
+
+        <div  style="background-color:#1d1d1d">
                 Powered By <a class="brown-text text-lighten-3" href="http://materializecss.com"> FC</a>
-            </div>
         </div>
-    </footer>
+    </footer>
+
 
 
     <!--  Scripts-->
