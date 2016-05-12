@@ -128,21 +128,18 @@ footer {
               <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <p class="grey-text text-lighten-4">Description.</p>
+                    <p class="grey-text text-lighten-4">The best app to order your favourite sushi</p>
 
 
                 </div>
                 <div class="col l3 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link1</a></li>
-                    </ul>
-                </div>
+                        <a class="white-text" href="#!">Webmaster</a>
             </div>
         </div>
+                  </div>
 
         <div  style="background-color:#1d1d1d">
-                Powered By <a class="brown-text text-lighten-3" href="http://materializecss.com"> FC</a>
+                Powered By <a class="brown-text text-lighten-3" href="http://www.chiarani.it"> FC</a>
         </div>
     </footer>
 
