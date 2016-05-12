@@ -15,6 +15,7 @@
     </script>
 
     <script>
+        //auto dropdown
         //$(document).ready(function () {
         //    // Handler for .ready() called.
         //    $('html, body').animate({
