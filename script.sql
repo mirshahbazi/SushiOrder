@@ -16,6 +16,7 @@ CREATE TABLE customers
 CREATE TABLE products 
   ( 
      idproduct   INT auto_increment NOT NULL, 
+	 name VARCHAR(50) NOT NULL,
      description VARCHAR(50) NOT NULL, 
      quantity    INT NOT NULL, 
      ingredients VARCHAR(200) NOT NULL, 
