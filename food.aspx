@@ -100,7 +100,10 @@ footer {
 
             <div class="row">
                 <div class="col s12 center">
-                </div>
+                    <form runat="server">   
+                    <asp:PlaceHolder ID="plholder" runat="server" />  
+                    </form> 
+                </div>      
             </div>
             <br />
         </div>
