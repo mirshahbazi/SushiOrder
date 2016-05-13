@@ -22,6 +22,7 @@ CREATE TABLE products
      price       DOUBLE NOT NULL, 
      notes       VARCHAR(60), 
      isfrozen    BOOL NOT NULL, 
+	 imguri      VARCHAR(50),
      PRIMARY KEY(idproduct) 
   ); 
 
