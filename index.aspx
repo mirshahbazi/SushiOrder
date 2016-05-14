@@ -114,7 +114,7 @@ footer {
                         <img src="img/drink.png" />
                         <p>DRINK</p>
                     </a>
-                    <a id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
+                    <a href="order.aspx" id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
                         <img src="img/user.png" />
                         <p>IL TUO ORDINE</p>
                     </a>
