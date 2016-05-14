@@ -26,6 +26,8 @@ CREATE TABLE products
 	 imguri      VARCHAR(50),
      PRIMARY KEY(idproduct) 
   ); 
+  
+
 
 CREATE TABLE shoppingcart 
   ( 
@@ -64,42 +66,39 @@ VALUES      (NULL,
              "388444518", 
              "dd@aa.it"); 
 
-INSERT INTO products 
-VALUES     (NULL, 
-            "sushi", 
-            3, 
-            "rice, salmon", 
-            20, 
-            "", 
-            false); 
-
-INSERT INTO products 
+  INSERT INTO products 
 VALUES     (NULL, 
             "pizza", 
-            5, 
-            "pomodoro, mozarella", 
-            50, 
+			"impasto con pizza"
+            3, 
+            "pomodoro, mozzarella", 
+            20, 
             "", 
-            true); 
+            false,
+			null); 
+			  INSERT INTO products 
+VALUES     (NULL, 
+            "spaghetti", 
+			"pasta lunga"
+            1, 
+            "farina, uova", 
+            18, 
+            "", 
+            false,
+			null); 
 
-INSERT INTO products 
+			
+			  INSERT INTO products 
 VALUES     (NULL, 
             "cotoletta", 
-            5, 
-            "pollo", 
-            2, 
-            "note1", 
-            false); 
-
-INSERT INTO products 
-VALUES     (NULL, 
-            "pasta", 
+			"quella milanese"
             1, 
-            "pastahh", 
-            17, 
+            "pangrattato, altro", 
+            32, 
             "", 
-            false); 
-
+            false,
+			null); 
+			
 INSERT INTO shoppingcart 
 VALUES     (1, 
             1, 

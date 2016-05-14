@@ -5,35 +5,46 @@ using System.Web;
 /// <summary>
 /// Descrizione di riepilogo per Cart
 /// </summary>
-public class Item
+public class Product
 {
+    public int IdProduct { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int Quantity { get; set; }
+    public string Ingriedients { get; set; }
+    public double Price { get; set; }
+    public string Notes { get; set; }
+    public bool IsFrozen { get; set; }
+    public string ImgUri { get; set; }
 
-    public int    IdItem    { get; set; }
-    public int    IdProduct { get; set; }
-    public double Price     { get;set;  }
-
-    public Item()
-	{
-	}
-
-    public Item(int idItem, int idproduct, double price)
+    public Product()
     {
-        IdItem    = idItem;
+    }
+
+    public Product(int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
+    {
         IdProduct = idproduct;
-        Price     = price;
+        Name = name;
+        Description = description;
+        Quantity = quantity;
+        Ingriedients = ingriedients;
+        Price = price;
+        Notes = notes;
+        IsFrozen = isfrozen;
+        ImgUri = imguri;
     }
 }
 
-public class Items : List<Item>
+public class Products : List<Product>
 {
-    public Items()
+    public Products()
     {
 
     }
 
-    public void AddItem(int idItem, int idproduct, double price)
+    public void AddItem(int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
     {
-        this.Add(new Item(idItem, idproduct, price));
+        this.Add(new Product(idproduct, name, description, quantity, ingriedients, price, notes, isfrozen, imguri));
     }
 
     public void RemoveItem(int idItem)
@@ -45,7 +56,7 @@ public class Items : List<Item>
     {
         double tmp = 0;
 
-        foreach(Item i in this)
+        foreach (Product i in this)
         {
             tmp += i.Price;
         }
