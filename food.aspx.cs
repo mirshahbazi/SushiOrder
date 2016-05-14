@@ -22,7 +22,13 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
+            if (Session["TotalCart"] == null)
+            {
+                Session["TotalCart"] = 0;
+            }
 
+            double totalCart = Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
 
             string qry = "SELECT * FROM PRODUCTS";
             MySqlCommand cmd = new MySqlCommand(qry, cn);
@@ -81,12 +87,16 @@ public partial class _Default : System.Web.UI.Page
 
     private void Btn_Click(object sender, EventArgs e)
     {
+        //only desktop price 
         Button tmpbtn = (Button)sender;
+
         string i = total_cart.InnerText.ToString();
         string i1 = total_cart.InnerText.ToString().Remove(0, 1);
+
         double value = Convert.ToDouble(i1);
         value += Convert.ToDouble(tmpbtn.ID);
+        Session["TotalCart"] = Convert.ToDouble(Session["TotalCart"]) + value;
 
-        total_cart.InnerText = "€" + value; 
+        total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]); 
     }
 }

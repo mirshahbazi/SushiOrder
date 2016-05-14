@@ -12,6 +12,14 @@ public partial class _Default : System.Web.UI.Page
         if(Session["Base"] == null)
         {
             Session["Base"] = "Attivo";
+
+
+
+        }
+        if (Session["TotalCart"] != null)
+        {
+            double totalCart = Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
         }
     }
 }
