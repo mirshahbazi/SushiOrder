@@ -71,7 +71,7 @@ footer {
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="#">How To</a></li>
                 <li id="menu"><a href="#">Home</a></li>
-                <li id="carrello"><a href="#" id="total_cart" runat="server">€0</a></li>
+                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
@@ -106,7 +106,7 @@ footer {
                         <img src="img/sushi_transparent.png" style="width:48px" />
                         <p>MENU'</p>
                     </a>
-                    <a id="btn_carrello" style="height:auto; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
+                    <a href="cart.aspx" id="btn_carrello" style="height:auto; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
                         <img src="img/cart.png" />
                         <p>CARRELLO</p>
                     </a>

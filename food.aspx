@@ -71,7 +71,7 @@ footer {
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="#">How To</a></li>
                 <li id="menu"><a href="index.aspx">Home</a></li>
-                <li id="carrello"><a href="#" id="total_cart" runat="server">€0</a></li>
+                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">

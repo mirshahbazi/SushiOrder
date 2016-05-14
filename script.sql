@@ -27,7 +27,8 @@ CREATE TABLE products
      PRIMARY KEY(idproduct) 
   ); 
   
-
+  
+  
 
 CREATE TABLE shoppingcart 
   ( 
@@ -69,9 +70,9 @@ VALUES      (NULL,
   INSERT INTO products 
 VALUES     (NULL, 
             "pizza", 
-			"impasto con pizza"
+			"impasto con pizza",
             3, 
-            "pomodoro, mozzarella", 
+            "pomodoro- mozzarella", 
             20, 
             "", 
             false,
@@ -79,9 +80,9 @@ VALUES     (NULL,
 			  INSERT INTO products 
 VALUES     (NULL, 
             "spaghetti", 
-			"pasta lunga"
+			"pasta lunga",
             1, 
-            "farina, uova", 
+            "farina- uova", 
             18, 
             "", 
             false,
@@ -91,9 +92,9 @@ VALUES     (NULL,
 			  INSERT INTO products 
 VALUES     (NULL, 
             "cotoletta", 
-			"quella milanese"
+			"quella milanese",
             1, 
-            "pangrattato, altro", 
+            "pangrattato- altro", 
             32, 
             "", 
             false,

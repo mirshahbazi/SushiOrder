@@ -7,6 +7,7 @@ using System.Web;
 /// </summary>
 public class Product
 {
+    public int ID { get; set; }
     public int IdProduct { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
@@ -21,8 +22,9 @@ public class Product
     {
     }
 
-    public Product(int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
+    public Product(int id, int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
     {
+        ID = id;
         IdProduct = idproduct;
         Name = name;
         Description = description;
@@ -42,14 +44,14 @@ public class Products : List<Product>
 
     }
 
-    public void AddItem(int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
+    public void AddItem(int id, int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
     {
-        this.Add(new Product(idproduct, name, description, quantity, ingriedients, price, notes, isfrozen, imguri));
+        this.Add(new Product(id, idproduct, name, description, quantity, ingriedients, price, notes, isfrozen, imguri));
     }
 
-    public void RemoveItem(int idItem)
+    public void RemoveItem(int i)
     {
-        this.RemoveItem(idItem);
+        this.RemoveAt(i);
     }
 
     public double TotalPrice()

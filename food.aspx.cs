@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
@@ -11,7 +12,7 @@ public partial class _Default : System.Web.UI.Page
     int counter = 0;
     protected MySqlConnection cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
     Products AllProducts = new Products();
-    Products MyProducts = new Products();
+    Products MyProducts;
 
 
 
@@ -27,7 +28,14 @@ public partial class _Default : System.Web.UI.Page
                 {
                     Session["TotalCart"] = 0;
                 }
+            if (Session["MyCart"] == null)
+            {
+            }
 
+                if (Session["MyCart"] != null)
+                {
+                    MyProducts = ((Products)Session["MyCart"]);
+                }
 
 
 
@@ -50,11 +58,13 @@ public partial class _Default : System.Web.UI.Page
                 MySqlDataReader dr = cmd.ExecuteReader();
 
 
+                int count = 0;
                 while (dr.Read())
                 {
+                count++;
                     string a = dr[7].ToString();
                     bool x = Convert.ToBoolean(dr[7]);
-                    AllProducts.Add(new Product(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), Convert.ToInt32(dr[3]), dr[4].ToString(), Convert.ToDouble(dr[5]), dr[6].ToString(), x, dr[8].ToString()));
+                    AllProducts.Add(new Product(count,Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), Convert.ToInt32(dr[3]), dr[4].ToString(), Convert.ToDouble(dr[5]), dr[6].ToString(), x, dr[8].ToString()));
 
                     // Test(dr[1].ToString(), dr[2].ToString(), dr[4].ToString(), dr[3].ToString(), dr[5].ToString());
                 }
@@ -77,7 +87,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Button btn = new Button();
             btn.Text = "Aggiungi Al carrello";
-            btn.ID = p.IdProduct.ToString();
+            btn.ID = p.ID.ToString();
             btn.Click += Btn_Click;
 
             LiteralControl div_card = new LiteralControl("<div class=\"card\" style=\"text-align:center !IMPORTANT\">");
@@ -122,15 +132,33 @@ public partial class _Default : System.Web.UI.Page
 
     //}
 
-    int ic = 0;
+
     private void Btn_Click(object sender, EventArgs e)
     {
+        Session["Count"] = (int)Session["Count"] + 1;
         Button thisbtn = (Button)sender;
 
         int id = int.Parse(thisbtn.ID);
-        var i = AllProducts.FindIndex(a => a.IdProduct == id);
 
-        MyProducts.Add(AllProducts[i]);
+        var i = AllProducts.FindIndex(a => a.ID == id);
+
+      //  int[] v = MyProducts.Select((b, y) => b.ID == id ? i : -1).Where(y => y != -1).ToArray();
+
+
+     //   var itwice = MyProducts.FindIndex(a => a.ID == id);
+
+     //   if (itwice != -1)
+     //   {
+      //      int tmp = MyProducts.Count +1 ;
+
+       //     var x = MyProducts.FindIndex(a => a.ID == tmp);
+
+      //      MyProducts.AddItem(tmp, AllProducts[i].IdProduct, AllProducts[i].Name, AllProducts[i].Description, AllProducts[i].Quantity, AllProducts[i].Ingriedients, AllProducts[i].Price, AllProducts[i].Notes, AllProducts[i].IsFrozen, AllProducts[i].ImgUri);
+      //  }
+        
+//else
+            MyProducts.AddItem((int)Session["Count"], AllProducts[i].IdProduct, AllProducts[i].Name, AllProducts[i].Description, AllProducts[i].Quantity, AllProducts[i].Ingriedients, AllProducts[i].Price, AllProducts[i].Notes, AllProducts[i].IsFrozen, AllProducts[i].ImgUri);
+
 
 
         double thisValue = AllProducts[i].Price;
@@ -141,7 +169,7 @@ public partial class _Default : System.Web.UI.Page
         Session["TotalCart"] = Convert.ToDouble(Session["TotalCart"]) + thisValue;
         total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
 
-
+        Session["MyCart"] = MyProducts;
         //Session["TotalCart"] = MyProducts;
         //Session["TotalCart"]
         //ic++;

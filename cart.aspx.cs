@@ -10,7 +10,7 @@ public partial class _Default : System.Web.UI.Page
     List<string> controlIdList = new List<string>();
     int counter = 0;
     protected MySqlConnection cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
-
+    Products MyProducts;
 
 
 
@@ -27,56 +27,63 @@ public partial class _Default : System.Web.UI.Page
                 Session["TotalCart"] = 0;
             }
 
-            Test((CartItems)Session["ListCart"]);
+            if (Session["MyCart"] != null)
+            {
+                MyProducts = ((Products)Session["MyCart"]);
+            }
 
+            double totalCart = Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+
+            CreateDynamicProductList(MyProducts);
         }
     }
-    public void Test(CartItems c)
+
+
+
+
+
+    public void CreateDynamicProductList(Products prodS)
     {
         counter++;
-
-        //Button btn = new Button();
-        //btn.Text = "Aggiungi Al carrello";
-        //btn.ID = c.pri;
-        //btn.Click += Btn_Click;
-
-        foreach(Item i in CartItems)
+        foreach (Product p in prodS)
         {
-            
+            Button btn = new Button();
+            btn.Text = "Rimuovi Dal Carrello";
+            btn.ID = p.ID.ToString();
+            btn.Click += Btn_Click1; ;
+
+            LiteralControl div_card = new LiteralControl("<div class=\"card\" style=\"text-align:center !IMPORTANT\">");
+            LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name + "</h5>");
+            LiteralControl Description = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + p.Description + "</p>");
+            LiteralControl TABLE = new LiteralControl("<table> <tr> <td>QUANTITY</td> <td>INGRIEDIENTS</td> <td>PRICE</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td>" + p.Price + "</td> </tr></table>");
+            LiteralControl div_card_closing = new LiteralControl("</div>");
+
+            plholder.Controls.Add(div_card);
+            plholder.Controls.Add(Title);
+            plholder.Controls.Add(Description);
+            plholder.Controls.Add(TABLE);
+            plholder.Controls.Add(btn);
+            plholder.Controls.Add(div_card_closing);
+
         }
-
-
-        LiteralControl div_card = new LiteralControl("<div class=\"card\" style=\"text-align:center !IMPORTANT\">");
-
-        plholder.Controls.Add(div_card);
-
-        LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + title + "</h5>");
-        LiteralControl Description = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + description + "</p>");
-
-
-        LiteralControl TABLE = new LiteralControl("<table> <tr> <td>QUANTITY</td> <td>INGRIEDIENTS</td> <td>PRICE</td> </tr>  <tr> <td>" + qty + "</td> <td>" + ingriedients + "</td> <td>" + price + "</td> </tr></table>");
-        plholder.Controls.Add(Title);
-        plholder.Controls.Add(Description);
-        plholder.Controls.Add(TABLE);
-        plholder.Controls.Add(btn);
-
-        LiteralControl div_card_closing = new LiteralControl("</div>");
-        plholder.Controls.Add(div_card_closing);
-
     }
 
-    private void Btn_Click(object sender, EventArgs e)
+    private void Btn_Click1(object sender, EventArgs e)
     {
-        //only desktop price 
-        Button tmpbtn = (Button)sender;
+        Button thisbtn = (Button)sender;
 
-        string i = total_cart.InnerText.ToString();
-        string i1 = total_cart.InnerText.ToString().Remove(0, 1);
+        int id = int.Parse(thisbtn.ID);
+        var i = MyProducts.FindIndex(a => a.ID == id);
 
-        double value = Convert.ToDouble(i1);
-        value += Convert.ToDouble(tmpbtn.ID);
-        Session["TotalCart"] = Convert.ToDouble(Session["TotalCart"]) + value;
+        double thisValue = MyProducts[i].Price;
 
+        Session["TotalCart"] = Convert.ToDouble(Session["TotalCart"]) - thisValue;
         total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+
+        MyProducts.RemoveAt(i);
+
+        Session["MyProducts"] = MyProducts;
+        Response.Redirect("cart.aspx");
     }
 }
