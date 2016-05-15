@@ -102,15 +102,15 @@ footer {
                 <div class="col s12 center">
 
                     <br /><br />
-                    <a href="food.aspx" id="btn_pietanze" style="height:auto; padding:15px; background-color:#FF2000" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
-                        <img src="img/sushi_transparent.png" style="width:48px" />
+                    <a href="food.aspx" id="btn_pietanze" style="height:auto; padding:15px; background-color:#03A9F4" class="btn-flat waves-effect text-lighten-1 lighten-1 col s5" onclick="btnfunc()">
+                        <img src="img/food.png" />
                         <p>MENU'</p>
                     </a>
                     <a href="cart.aspx" id="btn_carrello" style="height:auto; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" onclick="btnfunc()">
                         <img src="img/cart.png" />
                         <p>CARRELLO</p>
                     </a>
-                    <a id="btn_bevande" style="height:auto;margin-top:20px; padding:15px; background-color:#FF7300" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5">
+                    <a id="btn_bevande" style="height:auto;margin-top:20px; padding:15px; background-color:#03A9F4" class="btn-flat waves-effect text-lighten-1  lighten-1 col s5">
                         <img src="img/drink.png" />
                         <p>DRINK</p>
                     </a>
