@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SuhiOrder(1)", ".", "{3181A0A9-686B-4020-A893-873B8AAB7A6F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SuhiOrder", ".", "{3181A0A9-686B-4020-A893-873B8AAB7A6F}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_54390"
 		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Source\Repos\SuhiOrder\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54390\"

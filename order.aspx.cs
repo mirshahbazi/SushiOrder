@@ -35,6 +35,7 @@ public partial class _Default : System.Web.UI.Page
             double totalCart = Convert.ToDouble(Session["TotalCart"]);
             total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
 
+
         }
     }
 
@@ -42,4 +43,13 @@ public partial class _Default : System.Web.UI.Page
 
 
 
+
+    protected void btnSubmit_ServerClick(object sender, EventArgs e)
+    {
+        string nome = first_name.Value;
+        string cognome = last_name.Value;
+        //string email = myemail.Value;
+
+        Response.Write(@"<script language='javascript'>alert('The following errors have occurred: \n" + "can't connect to database. Try later. \n E: " + "ciao" + " .');</script>");
+    }
 }

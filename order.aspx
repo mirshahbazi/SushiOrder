@@ -112,22 +112,23 @@
                         <form class="col s12" runat="server">
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input id="first_name" type="text" class="validate">
+                                    <input runat="server" id="first_name" type="text" class="validate">
                                     <label for="first_name">NOME</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="last_name" type="text" class="validate">
+                                    <input runat="server" id="last_name" type="text" class="validate">
                                     <label for="last_name">COGNOME</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="email" type="email" class="validate">
+                            <div class="input-field col s6">
+                                <asp:TextBox ID="emailbox" runat="server" TextMode="Email" class="validate"></asp:TextBox> 
+                                    <input id="email" type="email" >
                                     <label for="email">Email</label>
                                 </div>
                                 <div class="input-field col s6">
 
-                                    <input id="icon_telephone" type="tel" class="validate">
+                                    <input runat="server" id="icon_telephone" type="tel" class="validate">
                                     <label for="email">Telefono</label>
                                 </div>
                             </div>
@@ -135,11 +136,11 @@
                                 <div class="input-field col s6">
 
                                     <label>Data</label>
-                                    <input type="date" class="datepicker">
+                                    <input runat="server" id="dtpicker" type="date" class="datepicker">
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <select class="browser-default">
+                                    <select runat="server" id="multiselection" class="browser-default">
                                         <option value="" disabled selected>Ora Ritiro</option>
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
@@ -150,14 +151,14 @@
                             <div class="row">
                                 <div class="input-field col s12">
 
-                                    <input type="checkbox" id="test5" />
+                                    <input runat="server" type="checkbox" id="test5" />
                                     <label for="test5">Confermo il mio carrello e la data di arrivo</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
 
-                                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                                    <button runat="server" id="btnSubmit" class="btn waves-effect waves-light" type="submit" name="action" onserverclick="btnSubmit_ServerClick">
                                         INVIA L'ORDINE!
     <i class="material-icons right">send</i>
                                     </button>
