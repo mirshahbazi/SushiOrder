@@ -106,6 +106,9 @@
     <div class="container" id="cont">
         <div class="section" style="margin-top: 50px;text-align:center">
             <h5> MANDA L'ORDINE ORA! </h5><br />
+            
+            <p runat="server" id ="errore"></p>
+
             <div class="row">
                 <div class="col s12 center card">
                     <div class="row">
@@ -122,8 +125,8 @@
                             </div>
                             <div class="row">
                             <div class="input-field col s6">
-                                <asp:TextBox ID="emailbox" runat="server" TextMode="Email" class="validate"></asp:TextBox> 
-                                    <input id="email" type="email" >
+                                <asp:TextBox id="myEmail" runat="server" TextMode="Email" class="validate"></asp:TextBox>
+
                                     <label for="email">Email</label>
                                 </div>
                                 <div class="input-field col s6">
@@ -140,7 +143,7 @@
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <select runat="server" id="multiselection" class="browser-default">
+                                    <select runat="server" id="selectOraRitiro" class="browser-default">
                                         <option value="" disabled selected>Ora Ritiro</option>
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
@@ -150,9 +153,7 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-
-                                    <input runat="server" type="checkbox" id="test5" />
-                                    <label for="test5">Confermo il mio carrello e la data di arrivo</label>
+                                    <asp:CheckBox Text="Confermo il mio carrello e la data di arrivo" ID="cartcheckbox" runat="server" />
                                 </div>
                             </div>
                             <div class="row">
