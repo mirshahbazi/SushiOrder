@@ -53,9 +53,40 @@ public partial class _Default : System.Web.UI.Page
             errore.InnerText = "DEVI CONFERMARE IL CARRELLO PRIMA DI ODINARE!";
             return;
         }
-        else
+        
+        if(nome == "" || nome == null)
         {
-            cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
+            errore.InnerText = "DEVI INSERIRE UN NOME!";
+            return;
+        }
+        if (cognome == "" || cognome == null)
+        {
+            errore.InnerText = "DEVI INSERIRE UN COGNOME!";
+            return;
+        }
+        if (email == "" || email == null)
+        {
+            errore.InnerText = "DEVI INSERIRE UNA EMAIL!";
+            return;
+        }
+        if (telefono == "" || telefono == null)
+        {
+            errore.InnerText = "DEVI INSERIRE UN NUMERO DI TELEFONO!";
+            return;
+        }
+        if (dataRitiro == "" || dataRitiro == null)
+        {
+            errore.InnerText = "DEVI INSERIRE LA DATA DEL RITIRO!";
+            return;
+        }
+        if (oraRitiro == "" || oraRitiro == null)
+        {
+            errore.InnerText = "DEVI INSERIRE L'ORA DEL RITIRO!";
+            return;
+        }
+
+
+        cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
             string qry = "INSERT INTO CUSTOMERS VALUES (null, @NAME, @SURNAME,02-02-2016, @CELL, @MAIL)";
             MySqlCommand cmd = new MySqlCommand(qry, cn);
             cmd.Parameters.AddWithValue("@NAME", nome);
@@ -68,6 +99,11 @@ public partial class _Default : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             cn.Close();
 
+        if (MyProducts == null)
+        {
+            errore.InnerText = "ATTENZIONE! IL TUO CARRELLO E' VUOTO";
+            return;
+        }
 
             cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
             string qry1 = "SELECT idcustomer FROM CUSTOMERS WHERE  NAME = \""+nome+ "\" AND SURNAME = \"" + cognome + "\" AND CELL = \"" + telefono + "\"";
@@ -89,7 +125,7 @@ public partial class _Default : System.Web.UI.Page
             cn.Close();
 
             UpdateTable(MyProducts, id, dataRitiro);
-        }
+
 
 
 
@@ -110,7 +146,7 @@ public partial class _Default : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@IDPRODUCT", p.IdProduct);
             cmd.Parameters.AddWithValue("@ORDERDATE", DateTime.Now);
             cmd.Parameters.AddWithValue("@PICKUPDATE", datar);
-            cmd.Parameters.AddWithValue("@TOTAL", 0);
+            cmd.Parameters.AddWithValue("@TOTAL", p.Price);
             cmd.Parameters.AddWithValue("@PAYMETHOD", "\"" + "not defined" + "\"");
             cmd.Parameters.AddWithValue("@NOTES", "\"" + "no notes" + "\"");
 
@@ -121,5 +157,7 @@ public partial class _Default : System.Web.UI.Page
 
         Session.Clear();
         Session.RemoveAll();
+
+        Response.Redirect("index.aspx");
     }
 }

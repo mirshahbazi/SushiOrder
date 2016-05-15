@@ -96,8 +96,13 @@ footer {
 
 
     <div class="container" id="cont">
-        <div class="section" style="padding-top:0px">
-
+        <div class="section" style="padding-top:0px;">
+                        <div class="row" style="text-align:center">
+                <div class="col s12 center card">
+                    <a href="order.aspx">Vai alla conferma dell'ordine!</a>
+                </div>      
+            </div>
+            <br />
             <div class="row">
                 <div class="col s12 center">
                     <form runat="server">   
