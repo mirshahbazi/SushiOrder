@@ -77,15 +77,15 @@
                 <img src="img/logo_big.png" style="height: 55px" />
             </a>
             <ul class="right hide-on-med-and-down">
-                <li id="how_to"><a href="#">How To</a></li>
+                <li id="how_to"><a href="howto.aspx">How To</a></li>
                 <li id="menu"><a href="index.aspx">Home</a></li>
                 <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li id="how_to_mobile"><a href="#">How To</a></li>
+                <li id="how_to_mobile"><a href="howto.aspx">How To</a></li>
                 <li id="menu_mobile"><a href="index.aspx">Home</a></li>
-                <li id="carrello_mobile"><a href="#" id="total_cart_mobile" runat="server">€0</a></li>
+                   <li id="carrello_mobil"><a href="cart.aspx" id="carrello_mobile" runat="server">€0</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>

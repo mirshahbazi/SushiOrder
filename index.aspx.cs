@@ -24,6 +24,7 @@ public partial class _Default : System.Web.UI.Page
         {
             double totalCart = Convert.ToDouble(Session["TotalCart"]);
             total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+            carrello_mobile.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
         }
 
     }
