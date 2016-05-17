@@ -114,7 +114,7 @@
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
-                                            <a href="order.aspx">Vai alla conferma dell'ordine!</a>
+                                            <a href="order.aspx" class="light-green white-text">Vai alla conferma dell'ordine!</a>
                     </div>
 
                 </div>

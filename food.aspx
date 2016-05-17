@@ -109,7 +109,7 @@ footer {
                     <div class="col s4">
                         <img src="img/cart.png" style="width:22px"/>
                         <br />
-                                            <a href="cart.aspx">Vai al Carrello!</a>
+                                            <a href="cart.aspx" class="light-green white-text">Vai al Carrello!</a>
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
