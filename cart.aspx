@@ -100,7 +100,7 @@
     <div class="container" id="cont">
         <div class="section" style="padding-top: 0px;">
             <div class="row" style="text-align: center">
-                <div class="col s12 center card">
+                <div class="col s12 center card" style="padding-top:3px">
                     <div class="col s4">
                         <img src="img/food.png" style="width:10px" />
                         <br />

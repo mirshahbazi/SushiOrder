@@ -87,16 +87,19 @@ public partial class _Default : System.Web.UI.Page
             btn.Text = "Aggiungi Al carrello";
             btn.ID = p.ID.ToString();
             btn.Click += Btn_Click;
-            btn.CssClass = "waves-effect waves-light btn blue darken-3";
+            btn.CssClass = "waves-effect waves-light btn blue darken-1";
 
             LiteralControl div_card = new LiteralControl("<div class=\"card col s12\" style=\"text-align:center !IMPORTANT; padding-bottom:10px;padding-top:10px\">");
             LiteralControl div_3 = new LiteralControl("<div class=\"col s3\" style=\"text-align:center !IMPORTANT\">");
             LiteralControl img = new LiteralControl("<img src=\"img/bg_blur.jpg\" style=\"width:100%\"/>");
             LiteralControl div_3card_closing = new LiteralControl("</div>");
             LiteralControl div_10 = new LiteralControl("<div class=\"col s9\" style=\"text-align:center !IMPORTANT\">");
-            LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name + "</h5>");
+            LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name.ToUpper() + "</h5>");
             LiteralControl Description = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + p.Description + "</p>");
-            LiteralControl TABLE = new LiteralControl("<table> <tr> <td>QUANTITY</td> <td>INGRIEDIENTS</td> <td>PRICE</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td style=\"color:red\">" + "€ " + p.Price + "</td> </tr></table>");
+            LiteralControl TABLE = new LiteralControl("<table class=\"responsive-table striped\"> <tr> <td>QUANTITA'</td> <td>INGRIEDIENTI</td> <td>PREZZO</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td style=\"color:red\">" + "€ " + p.Price + "</td> </tr></table>");
+
+            LiteralControl dib_btn = new LiteralControl("<div class=\"responsive-table\" style=\"text-align:right; margin-top:10px\">");
+            LiteralControl div_101card_closing = new LiteralControl("</div>");
             LiteralControl div_10card_closing = new LiteralControl("</div>");
             LiteralControl div_card_closing = new LiteralControl("</div>");
 
@@ -108,7 +111,9 @@ public partial class _Default : System.Web.UI.Page
             plholder.Controls.Add(Title);
             plholder.Controls.Add(Description);
             plholder.Controls.Add(TABLE);
+            plholder.Controls.Add(dib_btn);
             plholder.Controls.Add(btn);
+            plholder.Controls.Add(div_101card_closing);
             plholder.Controls.Add(div_10card_closing);
             plholder.Controls.Add(div_card_closing);
 
