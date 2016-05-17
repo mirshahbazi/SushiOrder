@@ -50,21 +50,32 @@ public partial class _Default : System.Web.UI.Page
         foreach (Product p in prodS)
         {
             Button btn = new Button();
-            btn.Text = "Rimuovi Dal Carrello";
+            btn.Text = "Rimuovi dal carrello";
             btn.ID = p.ID.ToString();
-            btn.Click += Btn_Click1; ;
+            btn.Click += Btn_Click1;
+            btn.CssClass = "waves-effect waves-light btn orange";
 
-            LiteralControl div_card = new LiteralControl("<div class=\"card\" style=\"text-align:center !IMPORTANT\">");
+            LiteralControl div_card = new LiteralControl("<div class=\"card col s12\" style=\"text-align:center !IMPORTANT; padding-bottom:10px;padding-top:10px\">");
+            LiteralControl div_3 = new LiteralControl("<div class=\"col s3\" style=\"text-align:center !IMPORTANT\">");
+            LiteralControl img = new LiteralControl("<img src=\"img/bg_blur.jpg\" style=\"width:100%\"/>");
+            LiteralControl div_3card_closing = new LiteralControl("</div>");
+            LiteralControl div_10 = new LiteralControl("<div class=\"col s9\" style=\"text-align:center !IMPORTANT\">");
             LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name + "</h5>");
             LiteralControl Description = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + p.Description + "</p>");
-            LiteralControl TABLE = new LiteralControl("<table> <tr> <td>QUANTITY</td> <td>INGRIEDIENTS</td> <td>PRICE</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td>" + p.Price + "</td> </tr></table>");
+            LiteralControl TABLE = new LiteralControl("<table> <tr> <td>QUANTITY</td> <td>INGRIEDIENTS</td> <td>PRICE</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td style=\"color:red\">" + "€ " + p.Price + "</td> </tr></table>");
+            LiteralControl div_10card_closing = new LiteralControl("</div>");
             LiteralControl div_card_closing = new LiteralControl("</div>");
 
             plholder.Controls.Add(div_card);
+            plholder.Controls.Add(div_3);
+            plholder.Controls.Add(img);
+            plholder.Controls.Add(div_3card_closing);
+            plholder.Controls.Add(div_10);
             plholder.Controls.Add(Title);
             plholder.Controls.Add(Description);
             plholder.Controls.Add(TABLE);
             plholder.Controls.Add(btn);
+            plholder.Controls.Add(div_10card_closing);
             plholder.Controls.Add(div_card_closing);
 
         }

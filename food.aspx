@@ -63,6 +63,7 @@ footer {
    
 </head>
 <body>
+    <div class="navbar-fixed">
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
@@ -82,6 +83,7 @@ footer {
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+        </div>
 
 
 
@@ -97,9 +99,29 @@ footer {
 
     <div class="container" id="cont">
         <div class="section" style="padding-top:0px">
+                        <div class="row" style="text-align: center">
+                <div class="col s12 center card">
+                    <div class="col s4">
+                        <img src="img/food.png" style="width:10px" />
+                        <br />
+                                            <a href="#.aspx">Menù</a>
+                    </div>
+                    <div class="col s4">
+                        <img src="img/cart.png" style="width:22px"/>
+                        <br />
+                                            <a href="cart.aspx">Vai al Carrello!</a>
+                    </div>
+                    <div class="col s4">
+                        <img src="img/user.png" style="width:22px"/><br />
+                                            <a href="order.aspx">Ordine</a>
+                    </div>
 
+                </div>
+            </div>
+            <br />
             <div class="row">
                 <div class="col s12 center">
+                    <br />
                     <form runat="server">   
                     <asp:PlaceHolder ID="plholder" runat="server" />  
                     </form> 

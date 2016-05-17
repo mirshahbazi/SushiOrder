@@ -104,6 +104,26 @@
 
 
     <div class="container" id="cont">
+                    <div class="row" style="text-align: center">
+                <div class="col s12 center card">
+                    <div class="col s4">
+                        <img src="img/food.png" style="width:10px" />
+                        <br />
+                                            <a href="food.aspx">Menù</a>
+                    </div>
+                    <div class="col s4">
+                        <img src="img/cart.png" style="width:22px"/>
+                        <br />
+                                            <a href="cart.aspx">Carrello</a>
+                    </div>
+                    <div class="col s4">
+                        <img src="img/user.png" style="width:22px"/><br />
+                                            <a href="#">Ordine</a>
+                    </div>
+
+                </div>
+            </div>
+            <br />
         <div class="section" style="margin-top: 50px;text-align:center">
             <h5> MANDA L'ORDINE ORA! </h5><br />
             
