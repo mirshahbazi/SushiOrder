@@ -71,6 +71,7 @@
 
 </head>
 <body>
+        <div class="navbar-fixed">
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
@@ -90,7 +91,7 @@
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
-
+            </div>
 
 
     <div class="row" style="background-color: #343434; margin-bottom: 2px">
