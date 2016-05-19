@@ -125,7 +125,7 @@
                 </div>
             </div>
             <br />
-        <div class="section" style="margin-top: 50px;text-align:center">
+        <div class="section" style="margin-top: 20px;text-align:center">
             <h5> MANDA L'ORDINE ORA! </h5><br />
             
             <p runat="server" id ="errore"></p>
@@ -216,7 +216,7 @@
         </div>
 
         <div style="background-color: #1d1d1d">
-            Powered By <a class="brown-text text-lighten-3" href="http://www.chiarani.it">FC</a>
+                      <span style="color:white">Powered By</span>   <a class="brown-text text-lighten-3" href="http://www.chiarani.it">FC</a>
         </div>
     </footer>
 

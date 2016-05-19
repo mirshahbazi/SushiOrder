@@ -150,7 +150,7 @@
         </div>
 
         <div style="background-color: #1d1d1d">
-            Powered By <a class="brown-text text-lighten-3" href="http://www.chiarani.it">FC</a>
+            <span style="color:white">Powered By</span>  <a class="brown-text text-lighten-3" href="http://www.chiarani.it">FC</a>
         </div>
     </footer>
 
