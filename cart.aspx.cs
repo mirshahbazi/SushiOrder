@@ -54,19 +54,20 @@ public partial class _Default : System.Web.UI.Page
             btn.ID       = p.ID.ToString();
             btn.Click   += Btn_Click1;
             btn.CssClass = "waves-effect waves-light btn blue orange";
+            string x = p.ImgUri + ".jpg";
 
-            LiteralControl div_card            = new LiteralControl("<div class=\"card col s12\" style=\"text-align:center !IMPORTANT; padding-bottom:10px;padding-top:10px\">");
-            LiteralControl div_3               = new LiteralControl("<div class=\"col s3\" style=\"text-align:center !IMPORTANT\">");
-            LiteralControl img                 = new LiteralControl("<img src=\"img/bg_blur.jpg\" style=\"width:100%\"/>");
-            LiteralControl div_3card_closing   = new LiteralControl("</div>");
-            LiteralControl div_10              = new LiteralControl("<div class=\"col s9\" style=\"text-align:center !IMPORTANT\">");
-            LiteralControl Title               = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name.ToUpper() + "</h5>");
-            LiteralControl Description         = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + p.Description + "</p>");
-            LiteralControl TABLE               = new LiteralControl("<table class=\"responsive-table striped\"> <tr> <td>QUANTITA'</td> <td>INGRIEDIENTI</td> <td>PREZZO</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + "x" + "</td> <td style=\"color:red\">" + "€ " + p.Price + "</td> </tr></table>");
-            LiteralControl dib_btn             = new LiteralControl("<div class=\"responsive-table\" style=\"text-align:right; margin-top:10px\">");
+            LiteralControl div_card = new LiteralControl("<div class=\"card col s12\" style=\"text-align:center !IMPORTANT; padding-bottom:10px;padding-top:10px;\">");
+            LiteralControl div_3 = new LiteralControl("<div class=\"frame col s6\" style=\"text-align:center !IMPORTANT;\">");
+            LiteralControl img = new LiteralControl("<span class=\"helper\"></span><img src=\"img/" + x + "\" style=\"width:100%;max-width:500px;padding:20px;vertical-align:middle\"/>");
+            LiteralControl div_3card_closing = new LiteralControl("</div>");
+            LiteralControl div_10 = new LiteralControl("<div class=\"col s6\" style=\"text-align:center !IMPORTANT\">");
+            LiteralControl Title = new LiteralControl("<h5 style=\"text-align:center !IMPORTANT\">" + p.Name.ToUpper() + "</h5>");
+            LiteralControl Description = new LiteralControl("<p style=\"text-align:center !IMPORTANT\">" + p.Description + "</p>");
+            LiteralControl TABLE = new LiteralControl("<table class=\"responsive-table striped\"> <tr> <td>CONTENENTE</td> <td>INGRIEDIENTI</td> <td>PREZZO</td> </tr>  <tr> <td>" + p.Quantity + "</td> <td>" + p.Ingriedients + "</td> <td style=\"color:red;text-align:right\">" + "€ " + p.Price + "</td> </tr></table>");
+            LiteralControl dib_btn = new LiteralControl("<div class=\"responsive-table striped\" style=\"text-align:right; margin-top:10px\">");
             LiteralControl div_101card_closing = new LiteralControl("</div>");
-            LiteralControl div_10card_closing  = new LiteralControl("</div>");
-            LiteralControl div_card_closing    = new LiteralControl("</div>");
+            LiteralControl div_10card_closing = new LiteralControl("</div>");
+            LiteralControl div_card_closing = new LiteralControl("</div>");
 
             plholder.Controls.Add(div_card);
             plholder.Controls.Add(div_3);

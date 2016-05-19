@@ -58,7 +58,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.frame {
 
+    white-space: nowrap;
+    
+    text-align: center; margin: 1em 0;
+}
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
     </style>
    
 </head>

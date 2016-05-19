@@ -11,7 +11,7 @@ public class Product
     public int IdProduct { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public int Quantity { get; set; }
+    public string Quantity { get; set; }
     public string Ingriedients { get; set; }
     public double Price { get; set; }
     public string Notes { get; set; }
@@ -22,7 +22,7 @@ public class Product
     {
     }
 
-    public Product(int id, int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
+    public Product(int id, int idproduct, string name, string description, string quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
     {
         ID = id;
         IdProduct = idproduct;
@@ -44,7 +44,7 @@ public class Products : List<Product>
 
     }
 
-    public void AddItem(int id, int idproduct, string name, string description, int quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
+    public void AddItem(int id, int idproduct, string name, string description, string quantity, string ingriedients, double price, string notes, bool isfrozen, string imguri)
     {
         this.Add(new Product(id, idproduct, name, description, quantity, ingriedients, price, notes, isfrozen, imguri));
     }
