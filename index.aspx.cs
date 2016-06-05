@@ -19,6 +19,8 @@ public partial class _Default : System.Web.UI.Page
             Session["Base"] = "Attivo";
             Session["MyCart"] = MyProducts;
             Session["Count"] = 0;
+            Session["TotalCart"] = 0;
+
         }
 
 

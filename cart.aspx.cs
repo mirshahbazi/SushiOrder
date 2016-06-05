@@ -10,8 +10,8 @@ public partial class _Default : System.Web.UI.Page
 { 
     List<string>   controlIdList = new List<string>();
     int                  counter = 0;
-    protected MySqlConnection cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
-    Products MyProducts;
+    protected MySqlConnection cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
+    Products MyProducts  = new Products();
 
 
 
@@ -32,7 +32,7 @@ public partial class _Default : System.Web.UI.Page
             {
                 MyProducts = ((Products)Session["MyCart"]);
             }
-			            if (Session["MyCart"] == null)
+			if (Session["MyCart"] == null)
             {
                 MyProducts = ((Products)Session["MyCart"]);
             }
@@ -40,7 +40,6 @@ public partial class _Default : System.Web.UI.Page
             double totalCart          =      Convert.ToDouble(Session["TotalCart"]);
             total_cart.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
             carrello_mobile.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
-
             cart_info.InnerText = "Totale Carrello: €" + totalCart + " - Item: " + MyProducts.Count;
             CreateDynamicProductList(MyProducts);
         }
