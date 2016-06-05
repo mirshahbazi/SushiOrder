@@ -110,11 +110,11 @@
     <div class="container" id="cont">
         <div class="section" style="padding-top: 0px;">
             <div class="row" style="text-align: center">
-                <div class="col s12 center card"style="padding-top:3px">
+                <div class="col s12 center"style="padding-top:3px">
                     <div class="col s4">
                         <img src="img/food.png" style="width:10px" />
                         <br />
-                                            <a href="food.aspx">Menù</a>
+                                            <a href="food.aspx"  class="green-text">Menù</a>
                     </div>
                     <div class="col s4">
                         <img src="img/cart.png" style="width:22px"/>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
-                                            <a href="order.aspx">Invia l'ordine</a>
+                                            <a href="order.aspx" class="green-text">Invia l'ordine</a>
                     </div>
 
                 </div>

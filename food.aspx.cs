@@ -11,7 +11,7 @@ public partial class _Default : System.Web.UI.Page
 {
     List<string> controlIdList   = new List<string>();
     int                counter   = 0;
-    protected MySqlConnection cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
+    protected MySqlConnection cn = new MySqlConnection("database=y;server=x;user id=b;password=a");
     Products AllProducts         = new Products();
     Products MyProducts = new Products();
 

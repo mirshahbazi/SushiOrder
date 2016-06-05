@@ -87,7 +87,7 @@ public partial class _Default : System.Web.UI.Page
         }
 
 
- cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
+ cn = new MySqlConnection("database=y;server=x;user id=b;password=a");
 
     string qry = "INSERT INTO CUSTOMERS VALUES (null, @NAME, @SURNAME,02-02-2016, @CELL, @MAIL)";
 
@@ -108,7 +108,7 @@ public partial class _Default : System.Web.UI.Page
             return;
         }
 
- cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
+ cn = new MySqlConnection("database=y;server=x;user id=b;password=a");
 
     string qry1 = "SELECT idcustomer FROM CUSTOMERS WHERE  NAME = \""+nome+ "\" AND SURNAME = \"" + cognome + "\" AND CELL = \"" + telefono + "\"";
 
@@ -130,7 +130,7 @@ public partial class _Default : System.Web.UI.Page
     }
 
     public void UpdateTable(Products ps, int id, string datar)
-    { cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
+    { cn = new MySqlConnection("database=y;server=x;user id=b;password=a");
     string qry = "INSERT INTO SHOPPINGCART VALUES (@IDCUSTOMER, @IDPRODUCT, @ORDERDATE, @PICKUPDATE, @TOTAL, @PAYMETHOD, @NOTES)";
 
         foreach (Product p in ps)
