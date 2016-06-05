@@ -32,15 +32,19 @@ public partial class _Default : System.Web.UI.Page
             {
                 MyProducts = ((Products)Session["MyCart"]);
             }
-			if (Session["MyCart"] == null)
-            {
-                MyProducts = ((Products)Session["MyCart"]);
-            }
+
 
             double totalCart          =      Convert.ToDouble(Session["TotalCart"]);
             total_cart.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
             carrello_mobile.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
-            cart_info.InnerText = "Totale Carrello: €" + totalCart + " - Item: " + MyProducts.Count;
+            if (MyProducts == null)
+            {
+                cart_info.InnerText = "Totale Carrello: €" + totalCart + " - Item: 0";
+            }
+            else
+            {
+                cart_info.InnerText = "Totale Carrello: €" + totalCart + " - Item: " + MyProducts.Count;
+            }
             CreateDynamicProductList(MyProducts);
         }
     }

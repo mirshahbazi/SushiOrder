@@ -11,7 +11,7 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        Products MyProducts = null;
+        Products MyProducts = new Products();
 
 
         if (Session["Base"] == null)
