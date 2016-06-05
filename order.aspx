@@ -79,14 +79,16 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="howto.aspx">How To</a></li>
-                <li id="menu"><a href="index.aspx">Home</a></li>
-                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
+                <li id="home"><a href="index.aspx">Home</a></li>
+                <li id="menu"><a href="food.aspx">Menu</a></li>
+                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">Carrello: €0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li id="how_to_mobile"><a href="howto.aspx">How To</a></li>
-                <li id="menu_mobile"><a href="index.aspx">Home</a></li>
-                   <li id="carrello_mobil"><a href="cart.aspx" id="carrello_mobile" runat="server">€0</a></li>
+                <li id="home_mobile"><a href="index.aspx">Home</a></li>
+                <li id="menu_mobile"><a href="food.aspx">Menu</a></li>
+                <li id="carrello_mobil" class="light-green"><a href="cart.aspx" id="carrello_mobile" runat="server">Carrello: €0</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -106,7 +108,7 @@
 
     <div class="container" id="cont">
                     <div class="row" style="text-align: center">
-                <div class="col s12 center card">
+                <div class="col s12 center card"style="padding-top:3px">
                     <div class="col s4">
                         <img src="img/food.png" style="width:10px" />
                         <br />
@@ -115,11 +117,11 @@
                     <div class="col s4">
                         <img src="img/cart.png" style="width:22px"/>
                         <br />
-                                            <a href="cart.aspx">Carrello</a>
+                                            <a href="cart.aspx" >Carrello</a>
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
-                                            <a href="#">Ordine</a>
+                                            <a href="#"  class="light-green white-text">Invia l'ordine</a>
                     </div>
 
                 </div>

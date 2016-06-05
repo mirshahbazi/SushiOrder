@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using testProducts;
 
 public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Products MyProducts = new Products();
+
+        Products MyProducts = null;
 
 
         if (Session["Base"] == null)
@@ -23,8 +25,8 @@ public partial class _Default : System.Web.UI.Page
         if (Session["TotalCart"] != null)
         {
             double totalCart = Convert.ToDouble(Session["TotalCart"]);
-            total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
-            carrello_mobile.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
+            carrello_mobile.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
         }
 
     }

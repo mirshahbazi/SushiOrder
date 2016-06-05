@@ -81,14 +81,16 @@ footer {
             </a>
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="howto.aspx">How To</a></li>
-                <li id="menu"><a href="index.aspx">Home</a></li>
-                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
+                <li id="home"><a href="index.aspx">Home</a></li>
+                <li id="menu"><a href="#">Menu</a></li>
+                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">Carrello: €0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li id="how_to_mobile"><a href="howto.aspx">How To</a></li>
-                <li id="menu_mobile"><a href="index.aspx">Home</a></li>
-                   <li id="carrello_mobil"><a href="cart.aspx" id="carrello_mobile" runat="server">€0</a></li>
+                <li id="home_mobile"><a href="index.aspx">Home</a></li>
+                <li id="menu_mobile"><a href="#">Menu</a></li>
+                <li id="carrello_mobil" class="light-green"><a href="cart.aspx" id="carrello_mobile" runat="server">Carrello: €0</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -114,16 +116,16 @@ footer {
                     <div class="col s4">
                         <img src="img/food.png" style="width:10px" />
                         <br />
-                                            <a href="#.aspx">Menù</a>
+                                            <a href="#.aspx"  class="light-green white-text">Menù</a>
                     </div>
                     <div class="col s4">
                         <img src="img/cart.png" style="width:22px"/>
                         <br />
-                                            <a href="cart.aspx" class="light-green white-text">Vai al Carrello!</a>
+                                            <a href="cart.aspx">Carrello</a>
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
-                                            <a href="order.aspx">Ordine</a>
+                                            <a href="order.aspx">Invia l'ordine</a>
                     </div>
 
                 </div>
@@ -133,9 +135,13 @@ footer {
                 <div class="col s12 center">
                     <h5 style="margin:0px">MENU</h5>
                     <br />
-                    <form runat="server">   
-                    <asp:PlaceHolder ID="plholder" runat="server" />  
-                    </form> 
+                    <form runat="server">
+                                                
+<div class="row">
+                                                <asp:PlaceHolder ID="plholder" runat="server" />
+</div>
+
+                    </form>
                 </div>      
             </div>
             <br />

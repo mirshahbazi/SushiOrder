@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="cart.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="cart - Copia.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,6 @@
             bottom: 0;
             width: 100%;
         }
-
     </style>
 
 </head>
@@ -80,16 +79,14 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="howto.aspx">How To</a></li>
-                <li id="home"><a href="index.aspx">Home</a></li>
-                <li id="menu"><a href="food.aspx">Menu</a></li>
-                <li id="carrello"><a href="#" id="total_cart" runat="server">Carrello: €0</a></li>
+                <li id="menu"><a href="index.aspx">Home</a></li>
+                <li id="carrello"><a href="#" id="total_cart" runat="server">€0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li id="how_to_mobile"><a href="howto.aspx">How To</a></li>
-                <li id="home_mobile"><a href="index.aspx">Home</a></li>
-                <li id="menu_mobile"><a href="food.aspx">Menu</a></li>
-                <li id="carrello_mobil" class="light-green"><a href="#" id="carrello_mobile" runat="server">Carrello: €0</a></li>
+                <li id="menu_mobile"><a href="index.aspx">Home</a></li>
+                <li id="carrello_mobil"><a href="cart.aspx" id="carrello_mobile" runat="server">€0</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -110,7 +107,7 @@
     <div class="container" id="cont">
         <div class="section" style="padding-top: 0px;">
             <div class="row" style="text-align: center">
-                <div class="col s12 center card"style="padding-top:3px">
+                <div class="col s12 center card" style="padding-top:3px">
                     <div class="col s4">
                         <img src="img/food.png" style="width:10px" />
                         <br />
@@ -119,30 +116,104 @@
                     <div class="col s4">
                         <img src="img/cart.png" style="width:22px"/>
                         <br />
-                                            <a href="#" class="light-green white-text">Carrello</a>
+                                            <a href="#">Carrello</a>
                     </div>
                     <div class="col s4">
                         <img src="img/user.png" style="width:22px"/><br />
-                                            <a href="order.aspx">Invia l'ordine</a>
+                                            <a href="order.aspx" class="light-green white-text">Vai alla conferma dell'ordine!</a>
                     </div>
 
                 </div>
-				                                         <div class="col s12 center card light-green">
+            </div>
+
+             <div class="col s12 center card" style="padding-top:3px">
                  <p runat="server" id="cart_info"></p>
             </div> 
-            </div>
+            <br />
             <div class="row">
-                <div class="col s12 center">
-                                        <h5 style="margin:0px">CARRELLO</h5>
-                    <br />
-                    <form runat="server">
-                                                
-                    <table class=" bordered">
-                                                <asp:PlaceHolder ID="plholder" runat="server" />
-                    </table>
+                <form runat="server">
+                     <div class="row" style="text-align:center">
+        <div class="col s12 m7 center-block">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/pizza.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+                                 <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/pizza.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>   
 
-                    </form>
-                </div>
+
+
+                                   
+                </form>
+
+
+
+
+
+
+
+
+
+
+                <%-- <h5 style="margin:0px">CARRELLO</h5>
+                    <br />
+                    
+                        <div class="col s12 card">
+
+                            
+                                <div class="col s4" style="background-color:red">
+                                
+                                    <img src="img/sashimi.jpg" class="responsive-img" style="height:100px"/>
+                                    a
+
+                            </div>
+                            <div class="col s8">
+
+                                                            <div class="col s4">                                                                                                 <p>titolo</p>  <p>prezzo</p></div>
+                                                            <div class="col s4">                                <asp:Button Text="text" runat="server" /></div>
+
+                                                             
+
+                            </div>
+                        </div>
+
+                        <div class="col s4 offset-s4">
+                            <div class="card">b</div>
+                        </div>
+
+                        <div class="col s4">
+                            <div class="card">c</div>
+                        </div>--%>
+
+
+
+
+
+
             </div>
             <br />
         </div>

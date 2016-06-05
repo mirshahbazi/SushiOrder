@@ -71,14 +71,16 @@ footer {
             </a>
             <ul class="right hide-on-med-and-down">
                 <li id="how_to"><a href="howto.aspx">How To</a></li>
-                <li id="menu"><a href="#">Home</a></li>
-                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">€0</a></li>
+                <li id="home"><a href="#">Home</a></li>
+                <li id="menu"><a href="food.aspx">Menu</a></li>
+                <li id="carrello"><a href="cart.aspx" id="total_cart" runat="server">Carrello: €0</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li id="how_to_mobile"><a href="howto.aspx">How To</a></li>
-                <li id="menu_mobile"><a href="#">Home</a></li>
-                   <li id="carrello_mobil"><a href="cart.aspx" id="carrello_mobile" runat="server">€0</a></li>
+                <li id="home_mobile"><a href="#">Home</a></li>
+                <li id="menu_mobile"><a href="food.aspx">Menu</a></li>
+                <li id="carrello_mobil" class="light-green"><a href="cart.aspx" id="carrello_mobile" runat="server">Carrello: €0</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -117,7 +119,7 @@ footer {
                     </a>
                     <a href="order.aspx" id="btn_ordine" style="height:auto;margin-top:20px; padding:15px; background-color:#D2D2D2" class="btn-flat waves-effect text-lighten-1  lighten-1 col col s5 offset-s2" >
                         <img src="img/user.png" />
-                        <p>IL TUO ORDINE</p>
+                        <p>INVIA L'ORDINE</p>
                     </a>
                 </div>
             </div>

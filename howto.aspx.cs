@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using testProducts;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -22,8 +23,8 @@ public partial class _Default : System.Web.UI.Page
 
 
             double totalCart = Convert.ToDouble(Session["TotalCart"]);
-            total_cart.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
-            carrello_mobile.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
+            carrello_mobile.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
         }
     }
 }

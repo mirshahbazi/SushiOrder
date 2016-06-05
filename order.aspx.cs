@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using testProducts;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -31,8 +32,8 @@ public partial class _Default : System.Web.UI.Page
             }
 
             double totalCart          =       Convert.ToDouble(Session["TotalCart"]);
-            total_cart.InnerText      = "€" + Convert.ToDouble(Session["TotalCart"]);
-            carrello_mobile.InnerText = "€" + Convert.ToDouble(Session["TotalCart"]);
+            total_cart.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
+            carrello_mobile.InnerText = "Carrello: €" + Convert.ToDouble(Session["TotalCart"]);
 
         }
     }
@@ -86,9 +87,9 @@ public partial class _Default : System.Web.UI.Page
         }
 
 
-        cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
+ cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
 
-        string qry = "INSERT INTO CUSTOMERS VALUES (null, @NAME, @SURNAME,02-02-2016, @CELL, @MAIL)";
+    string qry = "INSERT INTO CUSTOMERS VALUES (null, @NAME, @SURNAME,02-02-2016, @CELL, @MAIL)";
 
         MySqlCommand cmd = new MySqlCommand(qry, cn);
         cmd.Parameters.AddWithValue("@NAME",       nome);
@@ -107,9 +108,9 @@ public partial class _Default : System.Web.UI.Page
             return;
         }
 
-        cn = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
+ cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
 
-        string qry1 = "SELECT idcustomer FROM CUSTOMERS WHERE  NAME = \""+nome+ "\" AND SURNAME = \"" + cognome + "\" AND CELL = \"" + telefono + "\"";
+    string qry1 = "SELECT idcustomer FROM CUSTOMERS WHERE  NAME = \""+nome+ "\" AND SURNAME = \"" + cognome + "\" AND CELL = \"" + telefono + "\"";
 
         MySqlCommand cmd1 = new MySqlCommand(qry1, cn);
 
@@ -129,9 +130,8 @@ public partial class _Default : System.Web.UI.Page
     }
 
     public void UpdateTable(Products ps, int id, string datar)
-    {
-        cn         = new MySqlConnection("database=sushiorder;server=localhost;user id=root;password=masterkey");
-        string qry = "INSERT INTO SHOPPINGCART VALUES (@IDCUSTOMER, @IDPRODUCT, @ORDERDATE, @PICKUPDATE, @TOTAL, @PAYMETHOD, @NOTES)";
+    { cn = new MySqlConnection("database=Sql932431_2;server=62.149.150.176;user id=Sql932431;password=8i78d0gow3");
+    string qry = "INSERT INTO SHOPPINGCART VALUES (@IDCUSTOMER, @IDPRODUCT, @ORDERDATE, @PICKUPDATE, @TOTAL, @PAYMETHOD, @NOTES)";
 
         foreach (Product p in ps)
         {
